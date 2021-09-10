@@ -9,6 +9,7 @@ import Loading from "./Loading";
 
 function App() {
 
+  // states variables 
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("cats");
   const [isLoading, setIsLoading] = useState(true);
@@ -30,8 +31,9 @@ axios(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=${apiKey}
           <SearchForm performSearch= {performSearch}/>
         </div>
       </div>
+      /*        // check if the API is still being called and display the loading information, if noit display result// */
       <div className="main-content">
-        {isLoading? <Loading /> : <GifList data={data}/>}
+        {isLoading? <Loading /> : <GifList data={data}/>} 
         
       </div>
     </>

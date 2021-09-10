@@ -8,6 +8,7 @@ const GifList = props => {
   const results = props.data;
   let gifs; 
 
+  // check if there is a gif returned and render the Gifs, if not render the Nogif page
   if (results.length) {
     gifs = results.map(gif => <Gif url={gif.images.fixed_height.url} key={gif.id} />);    
   } else {

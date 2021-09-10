@@ -9,6 +9,7 @@ function SearchForm(props) {
     setSearchText(e.target.value);
   };
 
+  // calls the perforSearch function and clears the input 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.performSearch(searchText);
